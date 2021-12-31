@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Collapse, Container, Col, Nav, NavDropdown } from "react-bootstrap";
+import { Collapse, Container, Col, Nav } from "react-bootstrap";
 import { PuzzleFill, Lightbulb, GraphUp, FileEarmark, FileEarmarkFill, BookFill, People, Type, FileEarmarkPersonFill } from "react-bootstrap-icons";
 
 function Sidebar(props) {

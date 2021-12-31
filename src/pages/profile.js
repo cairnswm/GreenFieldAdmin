@@ -1,12 +1,9 @@
-import { useEffect, useState } from "react";
-import { Container, Row, Col, Card, Image, Form, Button, Dropdown } from "react-bootstrap";
-import { Text } from "react-bootstrap-text"
-import { ThreeDotsVertical } from "react-bootstrap-icons";
+import {  useState } from "react";
+import { Container, Row, Col, Form } from "react-bootstrap";
 
 function Profile(props) {
 
 	const [validated, setValidated] = useState(false);
-	const [recent, setRecent] = useState([]);
 
 	const handleSubmit = (event) => {
 	  const form = event.currentTarget;
@@ -17,15 +14,6 @@ function Profile(props) {
   
 	  setValidated(true);
 	};
-
-	useEffect(() => {
-		setRecent([
-			{ image: '04.jpg', name: 'Floyd Ortiz', lastContact: '2 min ago'},
-			{ image: '05.jpg', name: 'Luis Vasquez', lastContact: '2hrs ago'},
-			{ image: '06.jpg', name: 'Duane Mckinney', lastContact: 'yesterday'},
-			{ image: '07.jpg', name: 'Connie Lambert', lastContact: 'last week'}
-		])
-	},[])
 
 	return (
 		<div>
@@ -46,94 +34,12 @@ function Profile(props) {
 			</Container>
 			<Row className='p-3'>			
 				<Col md={4}>
-					<Card>
-						<Card.Body>
-							<Image className='mx-auto d-block' roundedCircle src="images/02.jpg" alt="Contact" />
-							<h3>Audrey Hunt</h3>
-							<Text>Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!</Text>
-							<Button>Send message</Button>
-						</Card.Body>
-					</Card>
-					<div className="p-3"></div>
-					<Card>
-						<Card.Body>
-							
-							<Card.Title>Recent contacts</Card.Title>
-							{recent.map(recentContact => {
-								return (<Row>
-									<Col xs={4}>
-									<Image style={{"maxWidth":"60px"}} roundedCircle src={`images/${recentContact.image}`} alt={recentContact.name}/>
-									</Col>
-									<Col style={{"fontSize":"10px"}}>
-									<Text className="mt-2" size="6">{recentContact.name}</Text>
-									<Text>{recentContact.lastContact}</Text>
-									</Col>
-								</Row>)
-							})}
-							
-						</Card.Body>
-					</Card>
+					
 				</Col>
 				<Col md={8}>
-					<Card>
-						<Card.Body>
-							<span style={{"float":"right"}}>
-								<Dropdown className="nocaret end" >
-								<Dropdown.Toggle as="span">
-									<ThreeDotsVertical/>
-								</Dropdown.Toggle>
-
-								<Dropdown.Menu>
-									<Dropdown.Item href="#/action-1">Send Message</Dropdown.Item>
-									<Dropdown.Item href="#/action-2">Share Contact</Dropdown.Item>
-									<Dropdown.Item href="#/action-3">Block Contact</Dropdown.Item>
-									<Dropdown.Item href="#/action-3">Delete Contact</Dropdown.Item>
-								</Dropdown.Menu>
-							</Dropdown>
-							</span>
-							
-							<Card.Title>Contact Information</Card.Title>
-							<Row>
-							<Col xs={2} />
-							<Col xs={8}>
-								<Form noValidate validated={validated} onSubmit={handleSubmit}>
-									
-									<Form.Group className="mb-3" controlId="formBasicName">
-										<Form.Label>Name</Form.Label>
-										<Form.Control required placeholder="Enter name" value="Audrey Hunt"/>
-									</Form.Group>
-									<Form.Group className="mb-3" controlId="formBasicEmail">
-										<Form.Label>Email address</Form.Label>
-										<Form.Control required type="email" placeholder="Enter email" />
-										<Form.Text className="text-muted">
-										We'll never share your email with anyone else.
-										</Form.Text>
-									</Form.Group>
-									<Form.Group className="mb-3" controlId="formBasicPhone">
-										<Form.Label>Phone</Form.Label>
-										<Form.Control required type="tel" placeholder="Enter phone" value="+1 785 261 9811"/>
-									</Form.Group>
-									<Form.Group className="mb-3" controlId="formBasicMobile">
-										<Form.Label>Mobile</Form.Label>
-										<Form.Control required type="tel" placeholder="Enter mobile number" value="+1 785 261 9811"/>
-									</Form.Group>
-									
-									<Form.Group className="mb-3" controlId="formBasicWebSite">
-										<Form.Label>Website</Form.Label>
-										<Form.Control placeholder="Enter webaddress"/>
-									</Form.Group>
-
-									<Form.Group className="mb-3" controlId="formBasicAddress">
-										<Form.Label>Address</Form.Label>
-										<Form.Control as="textarea" placeholder="Enter webaddress"/>
-									</Form.Group>
-									<Button variant="primary" type="submit">Submit</Button>
-								</Form>
-								<Button><Text end>Delete this contact?</Text></Button>
-							</Col>
-							</Row>
-						</Card.Body>
-					</Card>
+					
+					<Form noValidate validated={validated} onSubmit={handleSubmit}>
+					</Form>
 				</Col>
 			</Row>
 		</div>
