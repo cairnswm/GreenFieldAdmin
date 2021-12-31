@@ -1,6 +1,11 @@
-.App {
-  text-align: left;
+html, body {
+  height: 100%
 }
+
+#root {
+  height: 100%
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -15,14 +20,13 @@
 
 .App-header {
   background-color: #282c34;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding-bottom: 100px;
-  
 }
 
 .App-link {
@@ -36,150 +40,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  height: 30px; /* Set the fixed height of the footer here */
-  line-height: 30px; /* Vertically center the text there */
-  background-color: rgba(108, 207, 246, 1);
-}
-
-.header {
-  width: 100%;
-  height: 45px; /* Set the fixed height of the footer here */
-  line-height: 40px; /* Vertically center the text there */
-  background-color: rgba(136, 239, 33, 1);;
-}
-
-.headerTitle {
-  font-weight: bold;
-  font-size: x-large;
-}
-
-.menuBars {
-  float:left;
-  font-size:15px;
-  margin: 0px 20px 15px 15px;
-}
-.userProfile {
-  float:right;
-  margin: 0px 40px 15px 15px;
-}
-.userMail, .userNews {
-  float:right;
-  margin: 0px 10px 15px 15px;
-}
-.closeModal {
-  float:right;
-  margin: 0px;
-}
-.superscript {
-  background-color:red;
-  border-radius: 5px;
-  font-size:50%;
-  margin: 5px 0px 0px -5px;
-  padding: 1px 4px 1px 3px;
-}
-
-.sidebar {
-  border-right: 1px solid rgba(117, 119, 128, 1);
-  min-width: 150px;
-  min-height:600px;
-}
-
-.bodyHeader {  
-  border-bottom: 1px solid rgba(117, 119, 128, 1);
-  margin-bottom: 1em;
-}
-
-.container {
-  max-width: 100% !important;
-  margin-left: 0px !important;
-  margin-right: 0px !important;
-}
-.row {
-  width: 100%;
-  margin: 0px !important;
-  padding: 0px;
-}
-
-.visible {
-  display: block !important;
-}
-
-.profileOverlay {
-  position: fixed; /* Sit on top of the page content */  
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.7); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer; /* Add a pointer on hover */
-}
-.profileDialog {
-  position: fixed;
-  right: 10px;
-  top:65px;
-  height:150px;
-  width:400px;
-  background-color: white;
-  border: 2px solid black;
-  border-radius: 10px;
-  padding: 10px;
-}
-.profileDialogHeader {
-  font-weight: bold;
-}
-
-.card
-{
-  float: left;
-  margin: 5px;
-}
-
-.primary { background-color: rgba(136, 239, 33, 1); }
-button.btn.btn-primary { 
-  background-color: rgba(136, 239, 33, 1); 
-  border-color: rgba(136, 239, 33, 1);
-}
-
-button.btn.btn-primary:hover {
-  color: #fff;
-  background-color: rgba(0, 239, 0, 1);
-  border-color: rgba(0, 239, 99, 1);
-}
-
-button.btn.btn-primary:hover:active {
-  color: #fff;
-  background-color: rgb(100, 200, 0, 1);
-  border-color: rgba(100, 200, 99, 1);
-}
-
-.bold {
-  font-weight: bold; 
-}
-
-.mailrow {
-
-}
-
-.mailrow:hover {
-  background-color: rgba(108, 207, 246, 0.1);
-}
-
-.riderrow {
-  width:100%;
-  border: 2px solid rgba(108, 207, 246, 0.2);
-  border-radius: 10px;
-  margin: 1em;
-}
-
-.progress {
-  margin-top:0.5em;
 }

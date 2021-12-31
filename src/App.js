@@ -1,39 +1,31 @@
-import React from "react";
-
+import { useState } from "react";
 import "./App.css";
-import "./css/bootstrap.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./final.css";
+import { Row, Col } from "react-bootstrap";
 
 import Header from "./components/header";
-import Body from "./components/body";
-import Footer from "./components/footer";
-import { UserProvider, defaultContext } from "./userContext";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { showMenu: true };
+import PageRouting from "./components/pagerouting";
+import Sidebar from "./components/sidebar"
 
-    this.toggleMenu = this.toggleMenu.bind(this);
-  }
+function App() {
+	const [show, setShow] = useState(true);
+	const toggleShow = () => setShow(!show);
 
-  toggleMenu() {
-    this.setState(state => ({
-      showMenu: !state.showMenu
-    }));
-  }
-
-  render() {
-    const user = defaultContext;// { name: "William", loggedIn: true };
-    return (
-      <UserProvider value={user}>
-        <div className="App">
-          <Header title="Green Field" onToggleMenu={this.toggleMenu} />
-          <Body showMenu={this.state.showMenu}/>
-          <Footer />
-        </div>
-      </UserProvider>
-    );
-  }
+	return (
+		<div className='App' style={{ height: "100%" }}>
+			<Header menuShow={toggleShow} />
+			<div>
+				<Row>
+					<Sidebar show={show}/>
+					<Col xs={12} sm={8} xl={10} style={{ background: "#EEEEEE", padding: "0" }}>
+						<PageRouting />
+					</Col>
+				</Row>
+			</div>
+		</div>
+	);
 }
 
 export default App;

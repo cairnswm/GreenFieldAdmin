@@ -1,27 +1,17 @@
-# GreenFieldAdmin
-Simple React admin template using Bootstrap. Minimal number of npm packages used.
+# Green Field Admin
 
-# State
-Where possible data values are all stored in a context store and used to populate the screen. This means that just updating the context store will allow all screens to show the data properly. (Most templates hard code data within the HTML which makes it more difficult to modify to display data)
+Admin page layout using React-Bootstrap (https://react-bootstrap.github.io/).
 
-# Done
-Basic Layout
-Sidebar
-Profile and messages popups 
-React Router
+## 3 Pages
 
-# ToDo
-Login system
-Mail - view mail detail, send mail, delete mail
-- fix up layout, row/col structure not working for me
-Fetch - fetch data (from PHP backend)
+Contact Page
+Contact Details
+Blog
 
-# NPM Libraries Used
-react
-react-router
-font-awesome (free)
+## Blog 
 
-# Other files
-ColorPaletee - just come codes for colors for the demo palette
-class Files - a step by step walk through of how components were added - might become a tutorial series sometime in the future
+Blog page uses https://jsonplaceholder.typicode.com for Users, Posts and Comments. State is managed within the page and provides an interactive experience by choosing a person, choosing a post and viewing the posts and comments.
 
+## Custom Components
+
+Uses https://www.npmjs.com/package/react-bootstrap and https://www.npmjs.com/package/react-bootstrap-text and 
