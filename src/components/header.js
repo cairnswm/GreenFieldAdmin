@@ -46,11 +46,11 @@ function Header(props) {
 								</span>
 							}
 							id='dropdown-menu-align-end'>
-							<Dropdown.Item eventKey='1'>Action</Dropdown.Item>
-							<Dropdown.Item eventKey='2'>Another action</Dropdown.Item>
-							<Dropdown.Item eventKey='3'>Something else here</Dropdown.Item>
+							<Dropdown.Item href="#notification?id=1">Notification 1</Dropdown.Item>
+							<Dropdown.Item eventKey='2'>Notification 2</Dropdown.Item>
+							<Dropdown.Item eventKey='3'>Notification 3</Dropdown.Item>
 							<Dropdown.Divider />
-							<Dropdown.Item eventKey='4'>Separated link</Dropdown.Item>
+							<Dropdown.Item eventKey='4'>Todo 1</Dropdown.Item>
 						</DropdownButton>
              	 <DropdownButton
                 align='end'

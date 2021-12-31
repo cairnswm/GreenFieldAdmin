@@ -25,3 +25,11 @@
 
 body {
 }
+
+.row {
+  margin-right: 0px;
+}
+
+.closetext {
+  margin-bottom: 2px;
+}

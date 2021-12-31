@@ -4,7 +4,8 @@ import { ContactCard } from "../components/contactcard"
 
 function Contacts() {
 
-	const [contacts, setContacts] = useState([])
+	const [contacts, setContacts] = useState([]);
+	
 	useEffect(() => {
 		setContacts([
 			{ id: "1", image: '02.jpg', name: 'Audrey Blake', blurb: `Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!`},
@@ -14,6 +15,7 @@ function Contacts() {
 			{ id: "5", image: '04.jpg', name: 'Floyd Ortiz', blurb: `Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!`},
 		])
 	},[])
+
 	return (
 		<div>
 			<Container

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Collapse, Container, Col, Nav } from "react-bootstrap";
-import { PuzzleFill, Lightbulb, GraphUp, FileEarmark, FileEarmarkFill, BookFill, People, Type, FileEarmarkPersonFill } from "react-bootstrap-icons";
+import { PuzzleFill, Lightbulb, GraphUp, FileEarmark, FileEarmarkFill, BookFill, People, Type, FileEarmarkPersonFill, CloudSunFill } from "react-bootstrap-icons";
 
 function Sidebar(props) {
 	const [openPages, setOpenPages] = useState(false)
@@ -32,6 +32,7 @@ function Sidebar(props) {
 								<Nav.Link className="menuLinkChild" href='#contacts'><People /> Contacts</Nav.Link>
 								<Nav.Link className="menuLinkChild" href='#contactdetails'><FileEarmarkPersonFill /> Contact Details</Nav.Link>
 								<Nav.Link className="menuLinkChild" href='#blog'><BookFill /> Blog</Nav.Link>
+								<Nav.Link className="menuLinkChild" href='#weather'><CloudSunFill /> Weather</Nav.Link>
 							</div>
 						</Collapse>
 						<Nav.Item className="menuLink" onClick={toggleComponents}><PuzzleFill /> Components</Nav.Item>

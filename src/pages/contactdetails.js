@@ -44,9 +44,9 @@ function ContactDetails(props) {
 					<p style={{ textAlign: "left", fontSize: "20px", color: "grey" }}>Example contact details</p>
 				</div>
 			</Container>
-			<Row className='p-3'>			
-				<Col md={4}>
-					<Card>
+			<Row className='p-3 '>			
+				<Col lg={4} className="pb-3">
+					<Card className="pb-3">
 						<Card.Body>
 							<Image className='mx-auto d-block' roundedCircle src="images/02.jpg" alt="Contact" />
 							<h3>Audrey Hunt</h3>
@@ -54,19 +54,19 @@ function ContactDetails(props) {
 							<Button>Send message</Button>
 						</Card.Body>
 					</Card>
-					<div className="p-3"></div>
-					<Card>
+					<div  className="pb-3"></div>
+					<Card className="pb-3">
 						<Card.Body>
 							
 							<Card.Title>Recent contacts</Card.Title>
 							{recent.map(recentContact => {
 								return (<Row>
 									<Col xs={4}>
-									<Image style={{"maxWidth":"60px"}} roundedCircle src={`images/${recentContact.image}`} alt={recentContact.name}/>
+										<Image style={{"maxWidth":"60px"}} roundedCircle src={`images/${recentContact.image}`} alt={recentContact.name}/>
 									</Col>
 									<Col style={{"fontSize":"10px"}}>
-									<Text className="mt-2" size="6">{recentContact.name}</Text>
-									<Text>{recentContact.lastContact}</Text>
+										<Text className="mt-2 closetext" size="6">{recentContact.name}</Text>
+										<Text>{recentContact.lastContact}</Text>
 									</Col>
 								</Row>)
 							})}
@@ -74,7 +74,7 @@ function ContactDetails(props) {
 						</Card.Body>
 					</Card>
 				</Col>
-				<Col md={8}>
+				<Col md={8} className="pb-3">
 					<Card>
 						<Card.Body>
 							<span style={{"float":"right"}}>
@@ -129,7 +129,7 @@ function ContactDetails(props) {
 									</Form.Group>
 									<Button variant="primary" type="submit">Submit</Button>
 								</Form>
-								<Button><Text end>Delete this contact?</Text></Button>
+								<Button end><Text end>Delete this contact?</Text></Button>
 							</Col>
 							</Row>
 						</Card.Body>
