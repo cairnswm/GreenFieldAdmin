@@ -9,6 +9,7 @@ import Blog from "../pages/blog"
 import Profile from "../pages/profile"
 import Weather from "../pages/weather"
 import Blank from "../pages/blank"
+import Invoice from "../pages/invoice"
 
 function PageRouting(props) {
 
@@ -35,6 +36,7 @@ function PageRouting(props) {
             {page === "#blog" ? (<Blog />) : null }
             {page === "#profile" ? (<Profile />) : null }
             {page === "#weather" ? (<Weather />) : null }
+            {page === "#invoice" ? (<Invoice />) : null }
         </>
     )
 }

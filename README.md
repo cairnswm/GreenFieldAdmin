@@ -8,7 +8,9 @@ Pages are written as for an actual project using state and in some cases API cal
 
 - Contact Page
 - Contact Details
-- Blog
+- Blog (jasonplaceholder)
+- Live Weather (OpenWeatherMap)
+- Invoice
 
 ## Blog 
 
