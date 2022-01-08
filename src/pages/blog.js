@@ -69,17 +69,17 @@ function Blog(props) {
 								if (user.id === selectedUser.id) {
 									return (
 										<>
-										<Text truncate bold>
+										<Text bold>
 											{user.name}
-										</Text><br/>
+										</Text>
 										</>
 									);
 								} else {
 									return (
 										<>
 										<span onClick={() => setSelectedUser(user)}>
-											<Text as="p" truncate>{user.name}</Text>
-										</span><br/>
+											<Text as="p" >{user.name}</Text>
+										</span>
 										</>
 									);
 								}
