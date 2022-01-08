@@ -4,9 +4,9 @@ Admin page layout using React-Bootstrap (https://react-bootstrap.github.io/).
 
 ## 3 Pages
 
-Contact Page
-Contact Details
-Blog
+- Contact Page
+- Contact Details
+- Blog
 
 ## Blog 
 
