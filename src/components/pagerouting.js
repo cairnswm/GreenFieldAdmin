@@ -23,7 +23,7 @@ function PageRouting(props) {
     },[])
 
     return (
-        <>
+        <div style={{minHeight:"90vh"}}>
             {page === "#dashboard" ? (<Dashboard />) : null }
             {page === "" ? (<Dashboard />) : null }
             {page === "#" ? (<Dashboard />) : null }
@@ -37,7 +37,7 @@ function PageRouting(props) {
             {page === "#profile" ? (<Profile />) : null }
             {page === "#weather" ? (<Weather />) : null }
             {page === "#invoice" ? (<Invoice />) : null }
-        </>
+        </div>
     )
 }
 
