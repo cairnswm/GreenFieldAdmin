@@ -1,6 +1,5 @@
 import { useState, useContext } from "react";
 import { Container, Row, Col, Card, Form, Button, Spinner, Image } from "react-bootstrap";
-import { Text } from "react-bootstrap-text"
 import WeatherProvider, { WeatherContext } from "../context/weatherContext";
 
 const WeatherPage = (props) => {
@@ -84,7 +83,7 @@ const WeatherPage = (props) => {
 										<Row>
 											<Col md={12} lg={4}>
 													<Image className="mx-auto d-block" src={weather.current.condition.icon} />
-													<Text center>{weather.current.condition.text}</Text>
+													<p center>{weather.current.condition.text}</p>
 													
 											</Col>
 											<Col md={6} lg={4}>

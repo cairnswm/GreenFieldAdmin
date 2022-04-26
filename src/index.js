@@ -1,10 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 
-import AuthProvider, { AuthContext } from "./context/authcontext";
+import AuthProvider from "./context/authcontext";
 
 ReactDOM.render(
 	<React.StrictMode>

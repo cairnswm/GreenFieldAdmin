@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Image, Form, Button, Dropdown } from "react-bootstrap";
-import { Text } from "react-bootstrap-text"
 import { ThreeDotsVertical } from "react-bootstrap-icons";
 
 function ContactDetails(props) {
@@ -50,7 +49,7 @@ function ContactDetails(props) {
 						<Card.Body>
 							<Image className='mx-auto d-block' roundedCircle src="images/02.jpg" alt="Contact" />
 							<h3>Audrey Hunt</h3>
-							<Text>Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!</Text>
+							<p>Hello, I'm a just a dummy contact in your contact list and this is my presentation text. Have fun!</p>
 							<Button>Send message</Button>
 						</Card.Body>
 					</Card>
@@ -65,8 +64,8 @@ function ContactDetails(props) {
 										<Image style={{"maxWidth":"60px"}} roundedCircle src={`images/${recentContact.image}`} alt={recentContact.name}/>
 									</Col>
 									<Col style={{"fontSize":"10px"}}>
-										<Text className="mt-2 closetext" size="6">{recentContact.name}</Text>
-										<Text>{recentContact.lastContact}</Text>
+										<p className="mt-2 closetext" size="6">{recentContact.name}</p>
+										<p>{recentContact.lastContact}</p>
 									</Col>
 								</Row>)
 							})}
@@ -129,7 +128,7 @@ function ContactDetails(props) {
 									</Form.Group>
 									<Button variant="primary" type="submit">Submit</Button>
 								</Form>
-								<Button end><Text end>Delete this contact?</Text></Button>
+								<Button end>Delete this contact</Button>
 							</Col>
 							</Row>
 						</Card.Body>

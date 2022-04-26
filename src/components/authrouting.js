@@ -2,6 +2,7 @@
 import {useEffect, useState} from "react";
 import Login from "../pages/login"
 import Signup from "../pages/signup"
+import Forgot from "../pages/forgot"
 
 function AuthRouting(props) {
 
@@ -18,6 +19,7 @@ function AuthRouting(props) {
         <>
             {page !== "#signup" && page !== "#forgot" && page !== "#change" ? (<Login />) : null }
             {page === "#signup" ? (<Signup />) : null }
+            {page === "#forgot" ? (<Forgot />) : null }
         </>
     )
 }

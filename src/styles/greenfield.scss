@@ -1,3 +1,23 @@
+$primary: green;
+$secondary: gray;
+$success: lightgreen;
+$danger: red;
+$warning: orange;
+$info: lightblue;
+$light: white;
+$dark: black;
+
+
+@import "~bootstrap/scss/bootstrap";
+
+html, body {
+    height: 100%
+  }
+  
+  #root {
+    height: 100%
+  }
+  
 .nocaret .dropdown-toggle::after {
     display: inline-block;
     margin-left: 0.255em;
@@ -9,7 +29,7 @@
 .menuLink {
   display: block;
   padding: .5rem 1rem;
-  color: #0d6efd;
+  color: $primary;
   text-decoration: none;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
 }  
@@ -17,7 +37,7 @@
 .menuLinkChild {
   display: block;
   padding: 0 0 0.25rem 0.75rem;
-  color: #0d6efd;
+  color: $primary;
   text-decoration: none;
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
   cursor: pointer;

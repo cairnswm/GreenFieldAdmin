@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Table, Badge, Button } from "react-bootstrap";
-import { Text } from "react-bootstrap-text";
 import { Paypal, CreditCard } from "react-bootstrap-icons"
 
 function Dot() {
@@ -12,18 +11,7 @@ function Dot() {
 }
 
 function Invoice(props) {
-	const [validated, setValidated] = useState(false);
 	const [invoice, setInvoice] = useState({});
-
-	const handleSubmit = (event) => {
-		const form = event.currentTarget;
-		if (form.checkValidity() === false) {
-			event.preventDefault();
-			event.stopPropagation();
-		}
-
-		setValidated(true);
-	};
 
 	useEffect(() => {
 		let exampleInvoice = {
@@ -40,9 +28,9 @@ function Invoice(props) {
 				{ name: "Web hosting", quantity: "1", price: "30", total: "30" },
 				{ name: "Custom Web Development", quantity: "1", price: "170", total: "170" },
 			],
-			subTotal: "240",
+			subTotal: "220",
 			tax: "10",
-			grandTotal: "248",
+			grandTotal: "230",
 		};
 		setInvoice(exampleInvoice);
 	}, []);
@@ -66,50 +54,50 @@ function Invoice(props) {
 				{invoice.to ? (
 					<Card>
 						<Card.Body>
-							<Text bold center size='2' color='green'>
+							<p bold center size='2' color='green'>
 								Green Field Web Hosting
-							</Text>
-							<Text center size='6'>
+							</p>
+							<p center size='6'>
 								Since 2021
-							</Text>
+							</p>
 						</Card.Body>
 						<Card.Body>
 							<Row>
 								<Col xs={12} md={6}>
-									<Text bold size='4' className='mb-1'>
+									<p bold size='4' className='mb-1'>
 										To:
-									</Text>
-									<Text bold size='5' className='mb-1 ms-3'>
+									</p>
+									<p bold size='5' className='mb-1 ms-3'>
 										{invoice.to.name}
-									</Text>
-									<Text className='ms-3'>
+									</p>
+									<p className='ms-3'>
 										{invoice.to.address.street}
 										<br />
 										{invoice.to.address.city}
 										<br />
 										{invoice.to.address.country}
-									</Text>
+									</p>
 								</Col>
 								<Col xs={12} md={2}></Col>
 								<Col xs={12} md={4}>
-									<Text bold size='4' className='mb-1'>
+									<p bold size='4' className='mb-1'>
 										Invoice:
-									</Text>
-									<Text bold className='ms-3 mb-1'>
-										<Dot /> #: {invoice.number}
-									</Text>
-									<Text bold className='ms-3 mb-1'>
+									</p>
+									<p bold className='ms-3 mb-1'>
+										<Dot /> # {invoice.number}
+									</p>
+									<p bold className='ms-3 mb-1'>
 										<Dot /> Issued: {invoice.issueDate}
-									</Text>
-									<Text bold className='ms-3 mb-1'>
+									</p>
+									<p bold className='ms-3 mb-1'>
 										<Dot /> Due: {invoice.dueDate}
-									</Text>
-									<Text bold className='ms-3 mb-1'>
+									</p>
+									<p bold className='ms-3 mb-1'>
 										<Dot /> Status:{" "}
 										<Badge pill bg='warning'>
 											{invoice.status}
 										</Badge>
-									</Text>
+									</p>
 									-
 								</Col>
 							</Row>
@@ -133,10 +121,10 @@ function Invoice(props) {
 											<td>{item.name}</td>
 											<td>{item.quantity}</td>
 											<td>
-												<Text end>${item.price}</Text>
+												<p end>${item.price}</p>
 											</td>
 											<td>
-												<Text end>${item.total}</Text>
+												<p end>${item.total}</p>
 											</td>
 										</tr>
 									);
@@ -149,19 +137,19 @@ function Invoice(props) {
 									<Row>
 										<Col>Sub total</Col>
 										<Col>
-											<Text end>${invoice.subTotal}</Text>
+											<p end>${invoice.subTotal}</p>
 										</Col>
 									</Row>
 									<Row>
 										<Col>Tax</Col>
 										<Col>
-											<Text end>${invoice.tax}</Text>
+											<p end>${invoice.tax}</p>
 										</Col>
 									</Row>
 									<Row>
 										<Col>Grand total</Col>
 										<Col>
-											<Text end>${invoice.grandTotal}</Text>
+											<p end>${invoice.grandTotal}</p>
 										</Col>
 									</Row>
 								</Col>

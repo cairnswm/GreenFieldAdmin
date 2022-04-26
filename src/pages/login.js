@@ -1,22 +1,13 @@
 import { useState, useContext } from "react";
-import { Container, Button, Card, Image, InputGroup, FormControl } from "react-bootstrap";
+import { Container, Button, Card, InputGroup, FormControl } from "react-bootstrap";
 import { KeyFill, PersonFill, Eye, EyeSlash } from "react-bootstrap-icons";
 import { AuthContext } from "../context/authcontext";
 
 function Login(props) {
 	const [showPassword, setShowPassword] = useState(false);
-	const [showEye, setShowEye] = useState(true);
     const [username, setUserName] = useState("admin")
     const [password, setPassword] = useState("admin")
 	const { setUsernamePassword } = useContext(AuthContext);
-
-	const handleChange = (event) => {
-		if (event.target.value !== "") {
-			setShowEye(true);
-		} else {
-			setShowEye(false);
-		}
-	};
 
     const login = () => {
         setUsernamePassword(username, password);
@@ -58,7 +49,7 @@ function Login(props) {
 							onMouseLeave={onMouseUp}
 							onTouchStart={onMouseDown}
 							onTouchEnd={onMouseUp}>
-							{showEye ? showPassword ? <EyeSlash className='me-2' /> : <Eye className='me-2' /> : null}
+							{showPassword ? <EyeSlash className='me-2' /> : <Eye className='me-2' />}
 						</Button>
 						<FormControl
 							type={showPassword ? "text" : "password"}

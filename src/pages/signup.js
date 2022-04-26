@@ -1,12 +1,11 @@
 import { useState, useContext } from "react";
-import { Container, Button, Card, Image, InputGroup, FormControl } from "react-bootstrap";
+import { Container, Button, Card, InputGroup, FormControl } from "react-bootstrap";
 import { KeyFill, PersonFill, Eye, EyeSlash, Envelope } from "react-bootstrap-icons";
 import { AuthContext } from "../context/authcontext";
 
 function Signup(props) {
 	const [showPassword, setShowPassword] = useState(false);
     const [email, setEmail] = useState("cairnswm@gmail.com")
-	const [showEye, setShowEye] = useState(true);
     const [username, setUserName] = useState("admin")
     const [password, setPassword] = useState("admin")
     const [confirmPassword, setConfirmPassword] = useState("admin")
@@ -59,7 +58,7 @@ function Signup(props) {
 							onMouseLeave={onMouseUp}
 							onTouchStart={onMouseDown}
 							onTouchEnd={onMouseUp}>
-							{showEye ? showPassword ? <EyeSlash className='me-2' /> : <Eye className='me-2' /> : null}
+							{showPassword ? <EyeSlash className='me-2' /> : <Eye className='me-2' />}
 						</Button>
 						<FormControl
 							type={showPassword ? "text" : "password"}
