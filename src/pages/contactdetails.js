@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Image, Form, Button, Dropdown } from "react-bootstrap";
 import { ThreeDotsVertical } from "react-bootstrap-icons";
 
-function ContactDetails(props) {
+function ContactDetails() {
 
 	const [validated, setValidated] = useState(false);
 	const [recent, setRecent] = useState([]);
@@ -19,10 +19,10 @@ function ContactDetails(props) {
 
 	useEffect(() => {
 		setRecent([
-			{ image: '04.jpg', name: 'Floyd Ortiz', lastContact: '2 min ago'},
-			{ image: '05.jpg', name: 'Luis Vasquez', lastContact: '2hrs ago'},
-			{ image: '06.jpg', name: 'Duane Mckinney', lastContact: 'yesterday'},
-			{ image: '07.jpg', name: 'Connie Lambert', lastContact: 'last week'}
+			{ id: '1', image: '04.jpg', name: 'Floyd Ortiz', lastContact: '2 min ago'},
+			{ id: '2', image: '05.jpg', name: 'Luis Vasquez', lastContact: '2hrs ago'},
+			{ id: '3', image: '06.jpg', name: 'Duane Mckinney', lastContact: 'yesterday'},
+			{ id: '4', image: '07.jpg', name: 'Connie Lambert', lastContact: 'last week'}
 		])
 	},[])
 
@@ -59,7 +59,7 @@ function ContactDetails(props) {
 							
 							<Card.Title>Recent contacts</Card.Title>
 							{recent.map(recentContact => {
-								return (<Row>
+								return (<Row key={recentContact.id} >
 									<Col xs={4}>
 										<Image style={{"maxWidth":"60px"}} roundedCircle src={`images/${recentContact.image}`} alt={recentContact.name}/>
 									</Col>
@@ -99,7 +99,7 @@ function ContactDetails(props) {
 									
 									<Form.Group className="mb-3" controlId="formBasicName">
 										<Form.Label>Name</Form.Label>
-										<Form.Control required placeholder="Enter name" value="Audrey Hunt"/>
+										<Form.Control required placeholder="Enter name" defaultvalue="Audrey Hunt"/>
 									</Form.Group>
 									<Form.Group className="mb-3" controlId="formBasicEmail">
 										<Form.Label>Email address</Form.Label>
@@ -110,11 +110,11 @@ function ContactDetails(props) {
 									</Form.Group>
 									<Form.Group className="mb-3" controlId="formBasicPhone">
 										<Form.Label>Phone</Form.Label>
-										<Form.Control required type="tel" placeholder="Enter phone" value="+1 785 261 9811"/>
+										<Form.Control required type="tel" placeholder="Enter phone" defaultvalue="+1 785 261 9811"/>
 									</Form.Group>
 									<Form.Group className="mb-3" controlId="formBasicMobile">
 										<Form.Label>Mobile</Form.Label>
-										<Form.Control required type="tel" placeholder="Enter mobile number" value="+1 785 261 9811"/>
+										<Form.Control required type="tel" placeholder="Enter mobile number" defaultvalue="+1 785 261 9811"/>
 									</Form.Group>
 									
 									<Form.Group className="mb-3" controlId="formBasicWebSite">
@@ -128,7 +128,7 @@ function ContactDetails(props) {
 									</Form.Group>
 									<Button variant="primary" type="submit">Submit</Button>
 								</Form>
-								<Button end>Delete this contact</Button>
+								<Button>Delete this contact</Button>
 							</Col>
 							</Row>
 						</Card.Body>

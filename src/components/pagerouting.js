@@ -8,8 +8,12 @@ import Profile from "../pages/profile"
 import Weather from "../pages/weather"
 import Blank from "../pages/blank"
 import Invoice from "../pages/invoice"
+import Typography from "../pages/typography";
+import Buttons from "../pages/buttons";
+import Alerts from "../pages/alerts";
+import NavBars from "../pages/navbar";
 
-function PageRouting(props) {
+function PageRouting() {
 
     const [page, setPage] = useState("#home");
 
@@ -33,6 +37,10 @@ function PageRouting(props) {
             {page === "#profile" ? (<Profile />) : null }
             {page === "#weather" ? (<Weather />) : null }
             {page === "#invoice" ? (<Invoice />) : null } 
+            {page === "#typography" ? (<Typography />) : null } 
+            {page === "#buttons" ? (<Buttons />) : null } 
+            {page === "#alerts" ? (<Alerts />) : null } 
+            {page === "#nav" ? (<NavBars />) : null } 
         </div>
     )
 }

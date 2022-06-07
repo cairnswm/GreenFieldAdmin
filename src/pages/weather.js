@@ -40,7 +40,7 @@ const WeatherPage = (props) => {
 				<Row>
 					<Col lg={12} xl={4}>
 						<Card>
-							<Card.Header>Location</Card.Header>
+							<Card.Header className="bg-primary">Location</Card.Header>
 							<Card.Body>
 								<Form noValidate validated={validated} onSubmit={handleSubmit}>
 									<Form.Group className='mb-3' controlId='formBasicEmail'>

@@ -1,11 +1,15 @@
 import { useState } from "react"
 import { Collapse, Container, Col, Nav } from "react-bootstrap";
-import { GraphUp, FileEarmark, FileEarmarkFill, BookFill, People, FileEarmarkPersonFill, CloudSunFill, CashCoin } from "react-bootstrap-icons";
+import { GraphUp, FileEarmark, FileEarmarkFill, BookFill, People, FileEarmarkPersonFill, CloudSunFill, CashCoin, PuzzleFill, MenuButton, TypeBold, ExclamationCircle, ArrowDownRightSquare } from "react-bootstrap-icons";
 
 function Sidebar(props) {
 	const [openPages, setOpenPages] = useState(false)
+	const [openComponents, setOpenComponents] = useState(false)
 	const togglePages = () => {
 		setOpenPages(!openPages)
+	}	
+	const toggleComponents = () => {
+		setOpenComponents(!openComponents)
 	}	
 	
 	return (
@@ -33,7 +37,15 @@ function Sidebar(props) {
 								<Nav.Link className="menuLinkChild" href='#invoice'><CashCoin /> Invoice</Nav.Link>
 							</div>
 						</Collapse>
-						{/* <Nav.Item className="menuLink" onClick={toggleComponents}><PuzzleFill /> Components</Nav.Item> */}
+						<Nav.Item className="menuLink" onClick={toggleComponents}><PuzzleFill /> Components</Nav.Item>
+						<Collapse in={openComponents}>
+							<div className="menuLinkChild">
+								<Nav.Link className="menuLinkChild" href='#buttons'><MenuButton /> Buttons</Nav.Link>
+								<Nav.Link className="menuLinkChild" href='#typography'><TypeBold /> Typography</Nav.Link>
+								<Nav.Link className="menuLinkChild" href='#alerts'><ExclamationCircle /> Alerts</Nav.Link>
+								<Nav.Link className="menuLinkChild" href='#nav'><ArrowDownRightSquare /> Navbar</Nav.Link>
+							</div>
+						</Collapse>
 					</Nav>
 				</Container>
 			</Col>

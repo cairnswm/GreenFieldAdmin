@@ -32,10 +32,10 @@ function Contacts() {
 					</h1>
 					<p style={{ textAlign: "left", fontSize: "20px", color: "grey" }}>Example contact cards</p>
 				</div>
-			</Container>
+			</Container> 
 			<Row className='p-3'>
 				{contacts.map(contact => {
-					return (<Col md='4' className="mb-3">
+					return (<Col key={contact.id} md='4' className="mb-3">
 						<ContactCard id={contact.id} name={contact.name} blurb={contact.blurb} image={`images/${contact.image}`}/>
 					</Col>)
 				})}

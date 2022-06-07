@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Table, Badge, Button } from "react-bootstrap";
+import { Text } from "react-bootstrap-text";
 import { Paypal, CreditCard } from "react-bootstrap-icons"
 
 function Dot() {
@@ -10,7 +11,7 @@ function Dot() {
 	);
 }
 
-function Invoice(props) {
+function Invoice() {
 	const [invoice, setInvoice] = useState({});
 
 	useEffect(() => {
@@ -54,22 +55,22 @@ function Invoice(props) {
 				{invoice.to ? (
 					<Card>
 						<Card.Body>
-							<p bold center size='2' color='green'>
+							<Text bold center size='2' color='green'>
 								Green Field Web Hosting
-							</p>
-							<p center size='6'>
+							</Text>
+							<Text center size='6'>
 								Since 2021
-							</p>
+							</Text>
 						</Card.Body>
 						<Card.Body>
 							<Row>
 								<Col xs={12} md={6}>
-									<p bold size='4' className='mb-1'>
+									<Text bold size='4' className='mb-1'>
 										To:
-									</p>
-									<p bold size='5' className='mb-1 ms-3'>
+									</Text>
+									<Text bold size='5' className='mb-1 ms-3'>
 										{invoice.to.name}
-									</p>
+									</Text>
 									<p className='ms-3'>
 										{invoice.to.address.street}
 										<br />
@@ -80,24 +81,24 @@ function Invoice(props) {
 								</Col>
 								<Col xs={12} md={2}></Col>
 								<Col xs={12} md={4}>
-									<p bold size='4' className='mb-1'>
+									<Text bold size='4' className='mb-1'>
 										Invoice:
-									</p>
-									<p bold className='ms-3 mb-1'>
+									</Text>
+									<Text bold className='ms-3 mb-1'>
 										<Dot /> # {invoice.number}
-									</p>
-									<p bold className='ms-3 mb-1'>
+									</Text>
+									<Text bold className='ms-3 mb-1'>
 										<Dot /> Issued: {invoice.issueDate}
-									</p>
-									<p bold className='ms-3 mb-1'>
+									</Text>
+									<Text bold className='ms-3 mb-1'>
 										<Dot /> Due: {invoice.dueDate}
-									</p>
-									<p bold className='ms-3 mb-1'>
+									</Text>
+									<Text bold className='ms-3 mb-1'>
 										<Dot /> Status:{" "}
 										<Badge pill bg='warning'>
 											{invoice.status}
 										</Badge>
-									</p>
+									</Text>
 									-
 								</Col>
 							</Row>

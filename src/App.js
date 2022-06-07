@@ -7,7 +7,7 @@ import Header from "./components/header";
 import PageRouting from "./components/pagerouting";
 import AuthRouting from "./components/authrouting";
 import Sidebar from "./components/sidebar"
-import { AuthContext } from "./context/authcontext";
+import { AuthContext } from "./context/authcontext"; 
 
 function App() {
 	const [show, setShow] = useState(true);

@@ -7,6 +7,23 @@ $info: lightblue;
 $light: white;
 $dark: black;
 
+@import "~bootstrap/scss/_functions";
+@import "~bootstrap/scss/_variables";
+@import "~bootstrap/scss/_mixins";
+
+
+$custom-colors: (
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// Below required in Bootstrap 5.1 to define bg-{custom colors}
+//https://stackoverflow.com/questions/68755179/bootstrap-5-custom-theme-colors-not-updating-classes/68762902#68762902
+$theme-colors-rgb: map-loop($theme-colors, to-rgb, "$value");
+$utilities-colors: map-merge($utilities-colors, $theme-colors-rgb);
+$utilities-text-colors: map-loop($utilities-colors, rgba-css-var, "$key", "text");
+$utilities-bg-colors: map-loop($utilities-colors, rgba-css-var, "$key", "bg");
+
 
 @import "~bootstrap/scss/bootstrap";
 
@@ -42,9 +59,6 @@ html, body {
   transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
   cursor: pointer;
 }  
-
-body {
-}
 
 .row {
   margin-right: 0px;

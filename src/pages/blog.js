@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Card, Button } from "react-bootstrap";
 
-function Blog(props) {
+function Blog() {
   const [users, setUsers] = useState([]);
   const [selectedUser, setSelectedUser] = useState({});
   const [posts, setPosts] = useState([]);
@@ -76,7 +76,7 @@ function Blog(props) {
             <Card.Body>
               {users.map((user) => {
                 if (user.id === selectedUser.id) {
-                  return <p key={user.id} bold>{user.name}</p>;
+                  return <p key={user.id}>{user.name}</p>;
                 } else {
                   return (
                     <span key={user.id} onClick={() => setSelectedUser(user)}>
@@ -95,19 +95,19 @@ function Blog(props) {
                 Posts {selectedUser.id ? <>by {selectedUser.name}</> : ""}
               </Card.Header>
               <Card.Body>
-                {posts.map((post, idx) => {
+                {posts.map((item, idx) => {
                   return (
                     <Card key={idx} className="mb-3">
                       <Card.Header>
                         <Card.Title>
-                          <p>{post.title}</p>
+                          <p>{item.title}</p>
                         </Card.Title>
                       </Card.Header>
                       <Card.Body>
-                        <p>{post.body}</p>
+                        <p>{item.body}</p>
                       </Card.Body>
                       <Card.Footer>
-                        <Button onClick={() => setPost(post)}>Comments</Button>
+                        <Button onClick={() => setPost(item)}>Comments</Button>
                       </Card.Footer>
                     </Card>
                   );

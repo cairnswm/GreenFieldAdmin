@@ -7,7 +7,10 @@ function Blank({ children }) {
 
       <Content>
         <Content.Header>Page Sub Heading</Content.Header>
-        <Content.Body>Page Body</Content.Body>
+        <Content.Body>
+          Page Body
+          {children}
+        </Content.Body>
         <Content.Footer>Footer</Content.Footer>
       </Content>
     </Layout>
