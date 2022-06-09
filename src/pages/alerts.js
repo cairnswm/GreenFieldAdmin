@@ -39,6 +39,7 @@ function Alerts() {
             "info",
             "light",
             "dark",
+            "highlight"
           ].map((variant) => (
             <Alert key={variant} variant={variant}>
               This is a {variant} alert—check it out!

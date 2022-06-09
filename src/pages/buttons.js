@@ -1,4 +1,6 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
+import { FileEarmarkTextFill, Printer } from "react-bootstrap-icons";
+
 
 function Buttons() {
   return (
@@ -39,6 +41,7 @@ function Buttons() {
           <Button variant="light">Light</Button>{" "}
           <Button variant="dark">Dark</Button>{" "}
           <Button variant="link">Link</Button>
+          <Button variant="highlight">Custom - Highlight</Button>
           <br />
           <br />
           <Button variant="outline-primary">Outline Primary</Button>{" "}
@@ -50,6 +53,11 @@ function Buttons() {
           <Button variant="outline-light">Outline Light</Button>{" "}
           <Button variant="outline-dark">Outline Dark</Button>{" "}
           <Button variant="outline-link">Outline Link</Button>{" "}
+          <Button variant="outline-highlight">Outline Highlight</Button>{" "}
+          <br/><br/>
+
+          <Button variant="outline-primary"><FileEarmarkTextFill /></Button>{" "}
+          <Button variant="outline-primary"><Printer /></Button>{" "}
         </Col>
       </Row>
     </div>

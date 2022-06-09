@@ -14,7 +14,7 @@ function Header(props) {
 	return (
 		<Navbar collapseOnSelect expand='lg' bg='primary' variant='dark'>
 			<Container style={{ maxWidth: "100%", paddingLeft: "1rem",paddingRight: "1rem" }}> 
-				<Button aria-controls='' onClick={props.menuShow}>
+				<Button aria-label='open menu' onClick={props.menuShow}>
 					<WindowSidebar />
 				</Button>
 				<Navbar.Brand style={{ paddingLeft: "20px" }} href='#home'>

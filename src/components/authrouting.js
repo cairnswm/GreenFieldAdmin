@@ -4,7 +4,7 @@ import Login from "../pages/login"
 import Signup from "../pages/signup"
 import Forgot from "../pages/forgot"
 
-function AuthRouting(props) {
+function AuthRouting() {
 
     const [page, setPage] = useState("#login");
 

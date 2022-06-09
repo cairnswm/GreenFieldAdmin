@@ -13,6 +13,7 @@ $dark: black;
 
 
 $custom-colors: (
+  "highlight": purple
 );
 
 $theme-colors: map-merge($theme-colors, $custom-colors);

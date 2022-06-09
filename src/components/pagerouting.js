@@ -11,7 +11,8 @@ import Invoice from "../pages/invoice"
 import Typography from "../pages/typography";
 import Buttons from "../pages/buttons";
 import Alerts from "../pages/alerts";
-import NavBars from "../pages/navbar";
+import NavBars from "../pages/navbars";
+import TablePage from "../pages/tablepage";
 
 function PageRouting() {
 
@@ -41,6 +42,7 @@ function PageRouting() {
             {page === "#buttons" ? (<Buttons />) : null } 
             {page === "#alerts" ? (<Alerts />) : null } 
             {page === "#nav" ? (<NavBars />) : null } 
+            {page === "#table" ? (<TablePage />) : null }
         </div>
     )
 }

@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Collapse, Container, Col, Nav } from "react-bootstrap";
-import { GraphUp, FileEarmark, FileEarmarkFill, BookFill, People, FileEarmarkPersonFill, CloudSunFill, CashCoin, PuzzleFill, MenuButton, TypeBold, ExclamationCircle, ArrowDownRightSquare } from "react-bootstrap-icons";
+import { GraphUp, FileEarmark, FileEarmarkFill, BookFill, People, FileEarmarkPersonFill, CloudSunFill, CashCoin, PuzzleFill, MenuButton, TypeBold, ExclamationCircle, ArrowDownRightSquare, Grid3x2 } from "react-bootstrap-icons";
 
 function Sidebar(props) {
 	const [openPages, setOpenPages] = useState(false)
@@ -44,6 +44,7 @@ function Sidebar(props) {
 								<Nav.Link className="menuLinkChild" href='#typography'><TypeBold /> Typography</Nav.Link>
 								<Nav.Link className="menuLinkChild" href='#alerts'><ExclamationCircle /> Alerts</Nav.Link>
 								<Nav.Link className="menuLinkChild" href='#nav'><ArrowDownRightSquare /> Navbar</Nav.Link>
+								<Nav.Link className="menuLinkChild" href='#table'><Grid3x2 /> Table</Nav.Link>
 							</div>
 						</Collapse>
 					</Nav>

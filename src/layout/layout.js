@@ -44,7 +44,7 @@ function Layout({ children }) {
 }
 
 export const Content = ({ children }) => {
-  <Container className="p-3">
+  return <Container className="p-3">
     <Row>
       <Col md={12}>
         <Card>
