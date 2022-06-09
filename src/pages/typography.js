@@ -14,20 +14,37 @@ function Typography() {
             </Container>
               <Row className="p-3">
                 <Col xs={12} md={6}>
-                  <h2>Headings</h2>
+                  <h2>react-bootstrap-text</h2>
                   <hr/>
-                  <h1>Heading 1</h1>
+                  <Text as="span">&lt;Text as="h1"&gt;</Text><br/>
+                  <Text as="h1">Heading 1 using as="h1"</Text>
+                  <br/>
+                  <Text as="span">&lt;Text&gt;</Text><br/>
                   <Text>Default text without options.</Text>
-                  <h2>Heading 2</h2>
-                  <Text align="center">align="center" <br/>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</Text>
-                  <h3>Heading 3</h3>
-                  <Text align="end">align='end' <br/>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</Text>
-                  <h4>Heading 4</h4>
+                  
+                  <br/>
+                  <Text as="span">&lt;Text align="center"&gt;</Text><br/>
+                  <Text align="center">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</Text>
+                  
+                  <br/>
+                  <Text as="span">&lt;Text align="end"&gt;</Text><br/>
+                  <Text align="end">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</Text>
+                  
+                  <br/>
+                  <Text as="span">&lt;Text nowrap&gt;</Text><br/>
                   <Text nowrap>nowrap: Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</Text>
-                  <h5>Heading 5</h5>
-                  <Text>&lt;Text uppercase&gt;</Text><Text uppercase>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</Text>
-                  <h6>Heading 6</h6>
-                  <Text as="span">&lt;Text uppercase  as="span" fs={3} light bg="secondary"&gt;</Text><br/><Text as="span" fs={3} light bg="secondary">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</Text>
+                  
+                  <br/>
+                  <Text>&lt;Text uppercase&gt;</Text>
+                  <Text uppercase>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</Text>
+                  
+                  <br/>
+                  <Text as="span">&lt;Text uppercase  as="span" fs={3} light bg="secondary"&gt;</Text><br/>
+                  <Text as="span" fs={3} light bg="secondary">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</Text>
+                  <br/>
+                  <br/>
+                  <Text as="span">&lt;Text fs={3} text="primary"&gt;</Text><br/>
+                  <Text fs={3} text="primary">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</Text>
                 </Col>
                 <Col xs={12} md={6}>
 
