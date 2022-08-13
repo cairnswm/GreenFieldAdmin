@@ -13,6 +13,7 @@ import Buttons from "../pages/buttons";
 import Alerts from "../pages/alerts";
 import NavBars from "../pages/navbars";
 import TablePage from "../pages/tablepage";
+import TimelinePage from "../pages/timelinepage";
 
 function PageRouting() {
 
@@ -38,6 +39,7 @@ function PageRouting() {
             {page === "#profile" ? (<Profile />) : null }
             {page === "#weather" ? (<Weather />) : null }
             {page === "#invoice" ? (<Invoice />) : null } 
+            {page === "#timeline" ? (<TimelinePage />) : null } 
             {page === "#typography" ? (<Typography />) : null } 
             {page === "#buttons" ? (<Buttons />) : null } 
             {page === "#alerts" ? (<Alerts />) : null } 
@@ -47,4 +49,4 @@ function PageRouting() {
     )
 }
 
-export default PageRouting;
+export default PageRouting; 
